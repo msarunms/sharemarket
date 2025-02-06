@@ -48,9 +48,9 @@ if (!isset($_SESSION['username'])) {
 											<div class="d-flex align-items-center justify-content-between">
 												<h4 class="card-title mb-2">Last 30 record Stock Details</h4>
 												<div class="dropdown">
-													<a href="#" class="text-success btn btn-link  px-1"><i class="mdi mdi-refresh"></i></a>
+													<!-- <a href="#" class="text-success btn btn-link  px-1"><i class="mdi mdi-refresh"></i></a>
 													<a href="#" class="text-success btn btn-link px-1 dropdown-toggle dropdown-arrow-none" data-bs-toggle="dropdown" id="settingsDropdownsales">
-														<i class="mdi mdi-dots-horizontal"></i></a>
+														<i class="mdi mdi-dots-horizontal"></i></a> -->
 														<div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="settingsDropdownsales">
 															<a class="dropdown-item">
 																<i class="mdi mdi-grease-pencil text-primary"></i>
@@ -68,7 +68,7 @@ if (!isset($_SESSION['username'])) {
 													<li class="nav-item">
 														<a class="nav-link active ps-2 pe-2" id="revenue-for-last-month-tab" data-bs-toggle="tab" href="#revenue-for-last-month" role="tab" aria-controls="revenue-for-last-month" aria-selected="true">Daily Details</a>
 													</li>
-													<li class="nav-item">
+													<!-- <li class="nav-item">
 														<a class="nav-link ps-2 pe-2" id="server-loading-tab" data-bs-toggle="tab" href="#server-loading" role="tab" aria-controls="server-loading" aria-selected="false">Weekly Details</a>
 													</li>
 													<li class="nav-item">
@@ -79,7 +79,7 @@ if (!isset($_SESSION['username'])) {
 													</li>
 													<li class="nav-item">
 														<a class="nav-link ps-2 pe-2" id="sales-by-traffic-tab" data-bs-toggle="tab" href="#sales-by-traffic" role="tab" aria-controls="sales-by-traffic" aria-selected="false">15 Min Details</a>
-													</li>
+													</li> -->
 												</ul>
 												<div class="tab-content tab-no-active-fill-tab-content">
 													<div class="tab-pane fade show active" id="revenue-for-last-month" role="tabpanel" aria-labelledby="revenue-for-last-month-tab">

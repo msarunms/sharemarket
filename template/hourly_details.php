@@ -19,7 +19,7 @@ if (!isset($_SESSION['username'])) {
                                 <select class="form-control" id ="category_list">
                                         <?php
                                             $functionName = 'fetchData_stocks';
-                                            $url = 'http://localhost/Share_Market/Api_files/weekly_query.php?function=fetchData_stocks';
+                                            $url = 'http://localhost/Share_Market/Api_files/query_file.php?function=fetchData_stocks';
                                             $jsonData = file_get_contents($url);
 
                                             $dataArray = json_decode($jsonData, true);
@@ -42,9 +42,9 @@ if (!isset($_SESSION['username'])) {
                         </div>
                         <div class="col-md-3">
                             <div class="card-body">
-                            <h4 class="card-title">Total Weekly Details</h4>
+                            <h4 class="card-title">Total Hourly Details</h4>
                             <div class="template-demo">
-                                <button type="button" class="btn btn-success btn-rounded btn-fw" id="click-stock">Add Weekly</button>
+                                <button type="button" class="btn btn-success btn-rounded btn-fw" id="click-stock">Add Hourly</button>
                             </div>
                             </div>
                         </div>
@@ -57,7 +57,7 @@ if (!isset($_SESSION['username'])) {
                                 <select class="form-control" id="category_list_3">
                                         <?php
                                             $functionName = 'fetchData_stocks';
-                                            $url = 'http://localhost/Share_Market/Api_files/weekly_query.php?function=fetchData_stocks';
+                                            $url = 'http://localhost/Share_Market/Api_files/query_file.php?function=fetchData_stocks';
                                             $jsonData = file_get_contents($url);
 
                                             $dataArray = json_decode($jsonData, true);
@@ -87,7 +87,7 @@ if (!isset($_SESSION['username'])) {
                         </div>
                         <div class="col-md-3">
                             <div class="card-body">
-                            <h4 class="card-title">Bulk Upload Weekly Details</h4>
+                            <h4 class="card-title">Bulk Upload Hourly Details</h4>
                             <div class="template-demo">
                                 <form id="uploadForm" enctype="multipart/form-data">
                                     <input class="typeahead file-input" type="file" id="fileInput" name="fileInput" accept=".xlsx" type="file">
@@ -104,7 +104,7 @@ if (!isset($_SESSION['username'])) {
                         <div class="col-md-12 grid-margin stretch-card" style="display:none;" id="open-stock">
                             <div class="card" style="">
                             <div class="card-body">
-                                <h4 class="card-title">Weekly Form</h4>
+                                <h4 class="card-title">Hourly Form</h4>
                                 
                                 <form class="forms-sample">
                                     <div class="form-group row">
@@ -114,7 +114,7 @@ if (!isset($_SESSION['username'])) {
                                             <select class="form-control" id = "category_list_2">
                                                 <?php
                                                     $functionName = 'fetchData_stocks';
-                                                    $url = 'http://localhost/Share_Market/Api_files/weekly_query.php?function=fetchData_stocks';
+                                                    $url = 'http://localhost/Share_Market/Api_files/query_file.php?function=fetchData_stocks';
                                                     $jsonData = file_get_contents($url);
 
                                                     $dataArray = json_decode($jsonData, true);
@@ -185,7 +185,7 @@ if (!isset($_SESSION['username'])) {
                     </div>
                     <div class="card">
                         <div class="card-body">
-                        <h4 class="card-title">Weekly Details</h4>
+                        <h4 class="card-title">Hourly Details</h4>
                         <div class="row">
                             <div class="col-md-3">
                                 <input type="text" class="form-control" placeholder="search"  id="search">
@@ -485,7 +485,7 @@ $('#category_list').on('change', function() {
       "article_id": selectedValue
     };
     $.ajax({
-        url: "../Api_files/weekly_query.php?function=" + functionName_fetchtable,
+        url: "../Api_files/hourly_query.php?function=" + functionName_fetchtable,
         type: "POST",
         data: formData,
         dataType: "json",
@@ -540,7 +540,7 @@ function uploadfile(){
 
     if (stock_val !== "0" && stock_val !== 0) {
         $.ajax({
-            url: "../Api_files/weekly_query.php?function=" + functionName_fetchtable,
+            url: "../Api_files/hourly_query.php?function=" + functionName_fetchtable,
             type: "POST",
             data: formData,
             // dataType: "json",
@@ -608,7 +608,7 @@ $('#add-new-daily-details').on('click', function() {
         };
         var functionName_fetchtable = "add_new_entry"
         $.ajax({
-        url: "../Api_files/weekly_query.php?function=" + functionName_fetchtable,
+        url: "../Api_files/hourly_query.php?function=" + functionName_fetchtable,
         type: "POST",
         data: formData,
         dataType: "json",
@@ -655,7 +655,7 @@ $('.button_del').on('click', function() {
         };
         var functionName_fetchtable = "delete_details_trunc"
         $.ajax({
-        url: "../Api_files/weekly_query.php?function=" + functionName_fetchtable,
+        url: "../Api_files/hourly_query.php?function=" + functionName_fetchtable,
         type: "POST",
         data: formData,
         dataType: "json",

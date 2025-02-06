@@ -19,7 +19,7 @@ if (!isset($_SESSION['username'])) {
                                     <select class="form-control" id ="category_list">
                                             <?php
                                                 $functionName = 'fetchData_stocks';
-                                                $url = 'http://localhost/Share_Market/Api_files/weekly_query.php?function=fetchData_stocks';
+                                                $url = 'http://localhost/Share_Market/Api_files/query_file.php?function=fetchData_stocks';
                                                 $jsonData = file_get_contents($url);
 
                                                 $dataArray = json_decode($jsonData, true);
@@ -429,7 +429,7 @@ $('#enter_bottom_value').on('keyup', function() {
         "stock_val" : stock_val
     };
     $.ajax({
-    url: "../Api_files/weekly_query.php?function=" + functionName_fetchtable,
+    url: "../Api_files/hourly_query.php?function=" + functionName_fetchtable,
     type: "POST",
     data: formData,
     dataType: "json",
@@ -466,7 +466,7 @@ $('#enter_bottom_value').on('keyup', function() {
     // Table fetch
  var functionName_fetchdata = "fetch_calc_details_down_support_get_table"
  $.ajax({
-     url: "../Api_files/weekly_query.php?function=" + functionName_fetchdata,
+     url: "../Api_files/hourly_query.php?function=" + functionName_fetchdata,
      type: "POST",
      data: formData,
      dataType: "json",
@@ -515,7 +515,7 @@ $('#enter_upsupport_value').on('keyup', function() {
      "stock_val" : stock_val
  };
  $.ajax({
- url: "../Api_files/weekly_query.php?function=" + functionName_fetchtable,
+ url: "../Api_files/hourly_query.php?function=" + functionName_fetchtable,
  type: "POST",
  data: formData,
  dataType: "json",
@@ -543,7 +543,7 @@ $('#enter_upsupport_value').on('keyup', function() {
  // Table fetch
  var functionName_fetchdata = "fetch_calc_details_up_support_get_table"
  $.ajax({
- url: "../Api_files/weekly_query.php?function=" + functionName_fetchdata,
+ url: "../Api_files/hourly_query.php?function=" + functionName_fetchdata,
  type: "POST",
  data: formData,
  dataType: "json",
@@ -617,7 +617,7 @@ $('#enter_upsupport_value_1').on('keyup', function() {
         "stock_val" : stock_val
     };
     $.ajax({
-    url: "../Api_files/weekly_query.php?function=" + functionName_fetchtable,
+    url: "../Api_files/hourly_query.php?function=" + functionName_fetchtable,
     type: "POST",
     data: formData,
     dataType: "json",
@@ -642,7 +642,7 @@ $('#enter_upsupport_value_1').on('keyup', function() {
    // Table fetch
    var functionName_fetchdata = "fetch_calc_details_up_support_get_table_put_call"
     $.ajax({
-    url: "../Api_files/weekly_query.php?function=" + functionName_fetchdata,
+    url: "../Api_files/hourly_query.php?function=" + functionName_fetchdata,
     type: "POST",
     data: formData,
     dataType: "json",
@@ -711,7 +711,7 @@ $('#enter_high_value_1').on('keyup', function() {
         "stock_val" : stock_val
     };
     $.ajax({
-    url: "../Api_files/weekly_query.php?function=" + functionName_fetchtable,
+    url: "../Api_files/hourly_query.php?function=" + functionName_fetchtable,
     type: "POST",
     data: formData,
     dataType: "json",
@@ -734,7 +734,7 @@ $('#enter_high_value_1').on('keyup', function() {
     // Table fetch
    var functionName_fetchdata = "fetch_calc_details_high_get_table_put_call"
     $.ajax({
-    url: "../Api_files/weekly_query.php?function=" + functionName_fetchdata,
+    url: "../Api_files/hourly_query.php?function=" + functionName_fetchdata,
     type: "POST",
     data: formData,
     dataType: "json",

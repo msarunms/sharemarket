@@ -22,7 +22,7 @@ session_start();
     <!-- inject:css -->
     <link rel="stylesheet" href="css/style.css">
     <!-- endinject -->
-    <link rel="shortcut icon" href="images/favicon.png" />
+    <link rel="shortcut icon" href="./images/com_logo.jpeg" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 </head>
@@ -607,7 +607,7 @@ footer {
 <body>
   <!-- Navbar -->
   <nav class="navbar">
-    <img src="../template/images/trading_1.jpeg" alt="Logo" class="logo" style="border-radius:10px;width:50px;height:50px;">
+    <img src="./images/com_logo.jpeg" alt="Logo" class="logo" style="border-radius:10px;width:80px;height:80px;">
     <ul>
       <li><a href="" id="home_button">Home</a></li>
       <li><a href="" id="register_button">Register</a></li>
@@ -619,7 +619,8 @@ footer {
   <!-- Hero Section -->
   <section class="hero">
     <h1>VISINAW STOCK TECH</h1>
-    <p>Gateway for Financial Success</p>
+    <p>Our mission is to make trading and investing accessible, understandable, and profitable for everyone. We believe that financial education is the foundation of success in today’s dynamic markets, and we are dedicated to providing the knowledge and tools you need to succeed.
+</p>
     <a href="" class="btn">Register</a>
   </section>
 </body>
@@ -633,13 +634,25 @@ footer {
     </div>
     <div class="content">
       <div class="mission">
-        <h3>Total Number of Trades</h3>
-        <p>100+</p>
+        <h3>Who We Are</h3>
+        
+        <p>Who We Are
+At VISINAW STOCK TECH, we are a team of experienced traders, market analysts, and educators passionate about empowering individuals to achieve financial independence through smart trading and investment strategies. With a combined experience of over [X] years, we’ve trained thousands of aspiring traders and investors, helping them confidently navigate the complexities of financial markets.
+</p>
         <img src="../template/images/trading_2.jpeg" alt="Mission Image">
       </div>
       <div class="vision">
-        <h3>Our Subscribers        </h3>
-        <p>100+</p>
+        <h3>What We Offer</h3>
+        <p>
+We specialize in providing comprehensive training and resources in the following areas:
+
+Stock Market Trading: Learn the fundamentals of stock trading, technical analysis, and market trends to make informed decisions.
+Forex Trading: Master the art of currency trading, risk management, and strategies to profit in the global forex markets.
+Investment Strategies: Explore long-term investment strategies, portfolio management, and wealth-building techniques.
+Advanced Techniques: Dive into advanced concepts like options trading, algorithmic trading, and chart pattern analysis.
+Our training programs cater to all skill levels—from beginners to advanced traders—and are designed to fit your learning pace and style.
+
+</p>
         <img src="../template/images/trading_4.jpeg" alt="Vision Image">
       </div>
     </div>
@@ -740,6 +753,7 @@ footer {
 
     </div>
   </section>
+  
 </body>
 
 </html>
@@ -749,22 +763,43 @@ footer {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Services - Bitana Business Management</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+  
   <!-- Our Services Section -->
   <section class="our-services">
+    <h4>  Why Choose Us?
+</h4>
+  <p>
+Expert Guidance: Learn directly from industry professionals with proven track records of success.
+Practical Learning : Gain hands-on experience with live market analysis, case studies, and trading simulations.
+Comprehensive Resources: Access a wealth of study materials, webinars, and tools to support your journey.
+Community Support: Join a vibrant community of like-minded traders and investors who share ideas and strategies.
+Flexible Learning: Choose from online or in-person classes that fit your schedule.
+Our Values
+Integrity: We prioritize transparency and ethical practices in all aspects of trading and training.
+Excellence: We strive to deliver the highest quality education and support to our students.
+Innovation: We stay ahead of market trends and technological advancements to provide cutting-edge training.
+Our Vision
+To build a community of financially empowered individuals who are confident in navigating global markets and achieving their financial goals.
+
+Get Started Today
+Whether you’re looking to start your trading journey, enhance your existing skills, or explore new opportunities, [Your Business Name] is here to guide you every step of the way.
+
+Join us and take the first step towards financial independence and market success.
+
+Contact us today to learn more about our programs or to schedule a free consultation!
+  </p>
     <footer class="footer-sm">
     <div class="container">
+      
         <div class="row">
             <!-- ABOUT -->
             <div class="col-md-9">
                 <h6>About Us</h6>
-                <p style="color:#fff; font-size:1rem; text-align:justify; line-height:1.5; padding-left:10px;">Streetgains is a business name that is explained as Stock market Research with Entry, Exit, and Target for Gains.
-                We are a team of professionals with 10+ years of experience in research and trading in Indian Markets. Streetgains is formed on the basis of providing research support to Indian retail traders and investors <br>
-                To reach every trader of the Country with the best possible solution to their trading worries. Our unique way, To give the best out of day trading recommendations, we do understand the context of market psychology related to individual stock performance. For the betterment of entry and exit, we follow our methods and systems of day trading</p>
+                <p style="color:#fff; font-size:1rem; text-align:justify; line-height:1.5; padding-left:10px;">Welcome to VISINAW STOCK TECH, your trusted partner in mastering the art of trading and investing in the share market, stock market, and forex markets.<br>
             </div>
 
             <!-- Categories -->
@@ -772,15 +807,9 @@ footer {
                 <h6>Contact</h6>
                 <ul>
                     <li>
-                        <p><b>VISINAW STOCK TECH                        </b></p>
-                        <p><i class="fa fa-map-marker"></i> Flat Number, Address, Details<br>Pincode  </p>
+                        <p><b>VISINAW STOCK TECH </b></p>
                     </li>
-                    <li>
-                        <p><a href="tel:+91990391006"><i class="fa fa-phone"></i> +91 00000000000</a></p>
-                    </li>
-                    <li>
-                        <p><a href="mailto:research@streetgains.in"><i class="fa fa-envelope"></i> mail@gmail.com</a></p>
-                    </li>
+                    
                 </ul>
             </div>
         </div>
@@ -880,37 +909,42 @@ if (username === "") {
 else if (password === "") {
     toastr.info("Please check password");
 }else{
+    function runAjaxRequest() {
 
-    var formData = {
-        "user_name": username,
-        "pass_word": password,
-        
+      var formData = {
+          "user_name": username,
+          "pass_word": password,
+          
 
-    };
-    var functionName_fetchtable = "user_details"
-    $.ajax({
-        url: "../Api_files/login_query.php?function=" + functionName_fetchtable,
-        type: "POST",
-        data: formData,
-        dataType: "json",
+      };
+      var functionName_fetchtable = "user_details"
+      $.ajax({
+          url: "../Api_files/login_query.php?function=" + functionName_fetchtable,
+          type: "POST",
+          data: formData,
+          dataType: "json",
 
-        success: function(response) {
-            console.log(response);
-            if (response.status === "success") {
-                toastr.success(response.message);
+          success: function(response) {
+              console.log(response);
+              if (response.status === "success") {
+                  toastr.success(response.message);
 
-                // Redirect to the specified page
-                setTimeout(function() {
-                    window.location.href = response.redirect;
-                }, 1000);
-            } else {
-                toastr.error(response.message || "Login failed. Please try again.");
-            }
-        },
-        error: function(xhr, status, error) {
-            toastr.error("An error occurred: " + error);
-        }
-    }); 
+                  // Redirect to the specified page
+                  setTimeout(function() {
+                      window.location.href = response.redirect;
+                  }, 1000);
+              } else {
+                  toastr.error(response.message || "Login failed. Please try again.");
+              }
+          },
+          error: function(xhr, status, error) {
+              toastr.error("An error occurred: " + error);
+          }
+      }); 
+    }
+
+  runAjaxRequest();
+
 }
 
 

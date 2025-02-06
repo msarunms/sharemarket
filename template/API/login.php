@@ -1,16 +1,16 @@
 <?php
-require '../../vendor/autoload.php';
+require '../../../vendor/autoload.php';
 
 use KiteConnect\KiteConnect;
 
 $api_key = "h3lgesv019usfgxp";  // Replace with your API Key
 $kite = new KiteConnect($api_key);
 
-// Generate the Kite login URL
+// Generate the login URL
 $login_url = $kite->getLoginURL();
 echo "Login URL: $login_url\n";
 
-// Automatically open the login URL in the browser
+// Automatically open the URL in the default browser
 if (PHP_OS_FAMILY === 'Windows') {
     exec("start $login_url");
 } elseif (PHP_OS_FAMILY === 'Darwin') {

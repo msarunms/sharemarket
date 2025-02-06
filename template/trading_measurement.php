@@ -103,7 +103,7 @@ if (!isset($_SESSION['username'])) {
                                                                 </button>
                                                             </div>
                                                             <div class="col-md-3">
-                                                                <h4 class="card-title" style="margin: 5px;">' . htmlspecialchars($item['article_name']) . '</h4>
+                                                                <h4 class="card-title" style="margin: 5px;" data-article="' . htmlspecialchars($item['article_name']) . '">' . htmlspecialchars($item['article_name']) . '</h4>
                                                             </div>
                                                         </div>
                                                         <div class="form-group row details" id="details_' . htmlspecialchars($item['id']) . '" style="display:none;">
@@ -117,7 +117,7 @@ if (!isset($_SESSION['username'])) {
                                                                         <div class="form-group row">
                                                                             <div class="col">
                                                                                 <div id="the-basics">
-                                                                                    <input class="typeahead" type="text" placeholder="0.00">
+                                                                                    <input class="typeahead" type="text" placeholder="0.00" id="open_main_value' . htmlspecialchars($item['id']) . '">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -137,12 +137,12 @@ if (!isset($_SESSION['username'])) {
                                                                                     <div class="form-group row">
                                                                                         <div class="col">
                                                                                             <div id="the-basics">
-                                                                                                <input class="typeahead" type="text" placeholder="0.00" readonly>
+                                                                                                <input class="typeahead" type="text" placeholder="0.00" readonly id = "down_trend_means_one' . htmlspecialchars($item['id']) . '">
                                                                                             </div>
                                                                                         </div>
                                                                                         <div class="col">
                                                                                             <div id="bloodhound">
-                                                                                                <input class="typeahead" type="text" placeholder="0.00" readonly>
+                                                                                                <input class="typeahead" type="text" placeholder="0.00" readonly id = "down_trend_means__two' . htmlspecialchars($item['id']) . '">
                                                                                             </div>
                                                                                         </div>
                                                                                         
@@ -164,12 +164,12 @@ if (!isset($_SESSION['username'])) {
                                                                                     <div class="form-group row">
                                                                                         <div class="col">
                                                                                             <div id="the-basics">
-                                                                                                <input class="typeahead" type="text" placeholder="0.00" readonly>
+                                                                                                <input class="typeahead" type="text" placeholder="0.00" readonly id = "put_trend_means_one' . htmlspecialchars($item['id']) . '">
                                                                                             </div>
                                                                                         </div>
                                                                                         <div class="col">
                                                                                             <div id="bloodhound">
-                                                                                                <input class="typeahead" type="text" placeholder="0.00" readonly>
+                                                                                                <input class="typeahead" type="text" placeholder="0.00" readonly id = "put_trend_means_two' . htmlspecialchars($item['id']) . '">
                                                                                             </div>
                                                                                         </div>
                                                                                         
@@ -192,12 +192,12 @@ if (!isset($_SESSION['username'])) {
                                                                                     <div class="form-group row">
                                                                                         <div class="col">
                                                                                             <div id="the-basics">
-                                                                                                <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                <input class="typeahead" type="text" placeholder="0.00" id = "up_trend_means_one' . htmlspecialchars($item['id']) . '">
                                                                                             </div>
                                                                                         </div>
                                                                                         <div class="col">
                                                                                             <div id="bloodhound">
-                                                                                                <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                <input class="typeahead" type="text" placeholder="0.00" id = "up_trend_means_two' . htmlspecialchars($item['id']) . '">
                                                                                             </div>
                                                                                         </div>
                                                                                         
@@ -221,12 +221,12 @@ if (!isset($_SESSION['username'])) {
                                                                                     <div class="form-group row">
                                                                                         <div class="col">
                                                                                             <div id="the-basics">
-                                                                                                <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                <input class="typeahead" type="text" placeholder="0.00" id = "put_up_trend_means_one' . htmlspecialchars($item['id']) . '">
                                                                                             </div>
                                                                                         </div>
                                                                                         <div class="col">
                                                                                             <div id="bloodhound">
-                                                                                                <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                <input class="typeahead" type="text" placeholder="0.00" id = "put_up_trend_means_two' . htmlspecialchars($item['id']) . '">
                                                                                             </div>
                                                                                         </div>
                                                                                         
@@ -256,31 +256,31 @@ if (!isset($_SESSION['username'])) {
                                                                                         <div class="col">
                                                                                             <label >15 Min</label>
                                                                                             <div id="the-basics">
-                                                                                                <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                <input class="typeahead" type="text" placeholder="0.00" id = "fifteen_final' . htmlspecialchars($item['id']) . '">
                                                                                             </div>
                                                                                         </div>
                                                                                         <div class="col">
                                                                                             <label>Hourly</label>
                                                                                             <div id="bloodhound">
-                                                                                                <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                <input class="typeahead" type="text" placeholder="0.00" id = "hourly_final' . htmlspecialchars($item['id']) . '">
                                                                                             </div>
                                                                                         </div>
                                                                                         <div class="col">
                                                                                             <label>Daily</label>
                                                                                             <div id="bloodhound">
-                                                                                                <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                <input class="typeahead" type="text" placeholder="0.00" id = "daily_final' . htmlspecialchars($item['id']) . '">
                                                                                             </div>
                                                                                         </div>
                                                                                         <div class="col">
                                                                                             <label>Weekly</label>
                                                                                             <div id="bloodhound">
-                                                                                                <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                <input class="typeahead" type="text" placeholder="0.00" id = "weekly_final' . htmlspecialchars($item['id']) . '">
                                                                                             </div>
                                                                                         </div>
                                                                                         <div class="col">
                                                                                             <label>Monthly</label>
                                                                                             <div id="bloodhound">
-                                                                                                <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                <input class="typeahead" type="text" placeholder="0.00" id = "monthly_final' . htmlspecialchars($item['id']) . '">
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -302,31 +302,31 @@ if (!isset($_SESSION['username'])) {
                                                                                         <div class="col">
                                                                                             <label>15 Min</label>
                                                                                             <div id="the-basics">
-                                                                                                <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                <input class="typeahead" type="text" placeholder="0.00" id = "put_fifteen_final' . htmlspecialchars($item['id']) . '">
                                                                                             </div>
                                                                                         </div>
                                                                                         <div class="col">
                                                                                             <label>Hourly</label>
                                                                                             <div id="bloodhound">
-                                                                                                <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                <input class="typeahead" type="text" placeholder="0.00" id = "put_hourly_final' . htmlspecialchars($item['id']) . '">
                                                                                             </div>
                                                                                         </div>
                                                                                         <div class="col">
                                                                                             <label>Daily</label>
                                                                                             <div id="bloodhound">
-                                                                                                <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                <input class="typeahead" type="text" placeholder="0.00" id = "put_daily_final' . htmlspecialchars($item['id']) . '">
                                                                                             </div>
                                                                                         </div>
                                                                                         <div class="col">
                                                                                             <label>Weekly</label>
                                                                                             <div id="bloodhound">
-                                                                                                <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                <input class="typeahead" type="text" placeholder="0.00" id = "put_weekly_final' . htmlspecialchars($item['id']) . '">
                                                                                             </div>
                                                                                         </div>
                                                                                         <div class="col">
                                                                                             <label>Monthly</label>
                                                                                             <div id="bloodhound">
-                                                                                                <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                <input class="typeahead" type="text" placeholder="0.00" id = "put_monthly_final' . htmlspecialchars($item['id']) . '">
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -353,14 +353,14 @@ if (!isset($_SESSION['username'])) {
                                                                                 <div class="col-md-6">
                                                                                     <p class="mb-2">SCALPING PUT</p>
                                                                                 <div id="bloodhound">
-                                                                                                <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                <input class="typeahead" type="text" placeholder="0.00" id="scalping_put' . htmlspecialchars($item['id']) . '">
                                                                                             </div>                  
                                                                                 </div>
 
                                                                                 <div class="col-md-6">
                                                                                     <p class="mb-2">SCALPING CALL</p>
                                                                                 <div id="bloodhound">
-                                                                                                <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                <input class="typeahead" type="text" placeholder="0.00" id="scalping_call' . htmlspecialchars($item['id']) . '">
                                                                                             </div>                     
                                                                                 </div>
                                                                                 
@@ -415,7 +415,7 @@ if (!isset($_SESSION['username'])) {
                                                                                                                                                                                                                                                                                                                                       Call Targets
 
                                                                                             <div id="bloodhound" style="    padding: 9px 0px 0px 0px;">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="daily_call_target_' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                         </div>
 
@@ -426,26 +426,26 @@ if (!isset($_SESSION['username'])) {
                                                                                             <div class="col-md-3">
                                                                                                 
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="daily_call_target_one' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                  
                                                                                             </div>
 
                                                                                             <div class="col-md-3">
                                                                                                
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="daily_call_target_two' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                             </div>
                                                                                             <div class="col-md-3">
                                                                                                
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="daily_call_target_three' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                             </div>
                                                                                             <div class="col">
                                                                                                
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="daily_call_target_four' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                             </div>
                                                                                             
@@ -464,7 +464,7 @@ if (!isset($_SESSION['username'])) {
                                                                                                                                                                                                                                                                                                                                       Put Targets
 
                                                                                             <div id="bloodhound" style="    padding: 9px 0px 0px 0px;">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="daily_call_tarput_' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                         </div>
 
@@ -475,26 +475,26 @@ if (!isset($_SESSION['username'])) {
                                                                                             <div class="col-md-3">
                                                                                                 
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="daily_call_tarput_one' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                  
                                                                                             </div>
 
                                                                                             <div class="col-md-3">
                                                                                                
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="daily_call_tarput_two' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                             </div>
                                                                                             <div class="col-md-3">
                                                                                                
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="daily_call_tarput_three' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                             </div>
                                                                                             <div class="col">
                                                                                                
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="daily_call_tarput_four' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                             </div>
                                                                                             
@@ -524,7 +524,7 @@ if (!isset($_SESSION['username'])) {
                                                                                                                                                                                                                                                                                                                                       Call Targets
 
                                                                                             <div id="bloodhound" style="    padding: 9px 0px 0px 0px;">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="weekly_call_target_' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                         </div>
 
@@ -535,26 +535,26 @@ if (!isset($_SESSION['username'])) {
                                                                                             <div class="col-md-3">
                                                                                                 
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="weekly_call_target_one' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                  
                                                                                             </div>
 
                                                                                             <div class="col-md-3">
                                                                                                
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="weekly_call_target_two' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                             </div>
                                                                                             <div class="col-md-3">
                                                                                                
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="weekly_call_target_three' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                             </div>
                                                                                             <div class="col">
                                                                                                
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="weekly_call_target_four' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                             </div>
                                                                                             
@@ -573,7 +573,7 @@ if (!isset($_SESSION['username'])) {
                                                                                                                                                                                                                                                                                                                                       Put Targets
 
                                                                                             <div id="bloodhound" style="    padding: 9px 0px 0px 0px;">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="weekly_call_tarput_' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                         </div>
 
@@ -584,26 +584,26 @@ if (!isset($_SESSION['username'])) {
                                                                                             <div class="col-md-3">
                                                                                                 
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="weekly_call_tarput_one' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                  
                                                                                             </div>
 
                                                                                             <div class="col-md-3">
                                                                                                
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="weekly_call_tarput_two' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                             </div>
                                                                                             <div class="col-md-3">
                                                                                                
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="weekly_call_tarput_three' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                             </div>
                                                                                             <div class="col">
                                                                                                
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="weekly_call_tarput_four' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                             </div>
                                                                                             
@@ -634,7 +634,7 @@ if (!isset($_SESSION['username'])) {
                                                                                                                                                                                                                                                                                                                                       Call Targets
 
                                                                                             <div id="bloodhound" style="    padding: 9px 0px 0px 0px;">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="monthly_call_target_' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                         </div>
 
@@ -645,26 +645,26 @@ if (!isset($_SESSION['username'])) {
                                                                                             <div class="col-md-3">
                                                                                                 
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="monthly_call_target_one' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                  
                                                                                             </div>
 
                                                                                             <div class="col-md-3">
                                                                                                
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="monthly_call_target_two' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                             </div>
                                                                                             <div class="col-md-3">
                                                                                                
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="monthly_call_target_three' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                             </div>
                                                                                             <div class="col">
                                                                                                
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="monthly_call_target_four' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                             </div>
                                                                                             
@@ -683,7 +683,7 @@ if (!isset($_SESSION['username'])) {
                                                                                                                                                                                                                                                                                                                                       Put Targets
 
                                                                                             <div id="bloodhound" style="    padding: 9px 0px 0px 0px;">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="monthly_call_tarput_' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                         </div>
 
@@ -694,26 +694,26 @@ if (!isset($_SESSION['username'])) {
                                                                                             <div class="col-md-3">
                                                                                                 
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="monthly_call_tarput_one' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                  
                                                                                             </div>
 
                                                                                             <div class="col-md-3">
                                                                                                
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="monthly_call_tarput_two' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                             </div>
                                                                                             <div class="col-md-3">
                                                                                                
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="monthly_call_tarput_three' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                             </div>
                                                                                             <div class="col">
                                                                                                
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="monthly_call_tarput_four' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                             </div>
                                                                                             
@@ -746,7 +746,7 @@ if (!isset($_SESSION['username'])) {
                                                                                                                                                                                                                                                                                                                                       Call Targets
 
                                                                                             <div id="bloodhound" style="    padding: 9px 0px 0px 0px;">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="hourly_call_target_' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                         </div>
 
@@ -757,26 +757,26 @@ if (!isset($_SESSION['username'])) {
                                                                                             <div class="col-md-3">
                                                                                                 
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="hourly_call_target_one' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                  
                                                                                             </div>
 
                                                                                             <div class="col-md-3">
                                                                                                
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="hourly_call_target_two' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                             </div>
                                                                                             <div class="col-md-3">
                                                                                                
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="hourly_call_target_three' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                             </div>
                                                                                             <div class="col">
                                                                                                
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="hourly_call_target_four' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                             </div>
                                                                                             
@@ -795,7 +795,7 @@ if (!isset($_SESSION['username'])) {
                                                                                                                                                                                                                                                                                                                                       Put Targets
 
                                                                                             <div id="bloodhound" style="    padding: 9px 0px 0px 0px;">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="hourly_call_tarput_' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                         </div>
 
@@ -806,26 +806,26 @@ if (!isset($_SESSION['username'])) {
                                                                                             <div class="col-md-3">
                                                                                                 
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="hourly_call_tarput_one' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                  
                                                                                             </div>
 
                                                                                             <div class="col-md-3">
                                                                                                
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="hourly_call_tarput_two' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                             </div>
                                                                                             <div class="col-md-3">
                                                                                                
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="hourly_call_tarput_three' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                             </div>
                                                                                             <div class="col">
                                                                                                
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="hourly_call_tarput_four' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                             </div>
                                                                                             
@@ -855,7 +855,7 @@ if (!isset($_SESSION['username'])) {
                                                                                                                                                                                                                                                                                                                                       Call Targets
 
                                                                                             <div id="bloodhound" style="    padding: 9px 0px 0px 0px;">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="fifteen_call_target_' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                         </div>
 
@@ -866,26 +866,26 @@ if (!isset($_SESSION['username'])) {
                                                                                             <div class="col-md-3">
                                                                                                 
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="fifteen_call_target_one' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                  
                                                                                             </div>
 
                                                                                             <div class="col-md-3">
                                                                                                
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="fifteen_call_target_two' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                             </div>
                                                                                             <div class="col-md-3">
                                                                                                
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="fifteen_call_target_three' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                             </div>
                                                                                             <div class="col">
                                                                                                
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="fifteen_call_target_four' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                             </div>
                                                                                             
@@ -904,7 +904,7 @@ if (!isset($_SESSION['username'])) {
                                                                                                                                                                                                                                                                                                                                       Put Targets
 
                                                                                             <div id="bloodhound" style="    padding: 9px 0px 0px 0px;">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="fifteen_call_tarput_' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                         </div>
 
@@ -915,26 +915,26 @@ if (!isset($_SESSION['username'])) {
                                                                                             <div class="col-md-3">
                                                                                                 
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="fifteen_call_tarput_one' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                  
                                                                                             </div>
 
                                                                                             <div class="col-md-3">
                                                                                                
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="fifteen_call_tarput_two' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                             </div>
                                                                                             <div class="col-md-3">
                                                                                                
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="fifteen_call_tarput_three' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                             </div>
                                                                                             <div class="col">
                                                                                                
                                                                                             <div id="bloodhound">
-                                                                                                            <input class="typeahead" type="text" placeholder="0.00">
+                                                                                                            <input class="typeahead" type="text" placeholder="0.00" id ="fifteen_call_tarput_four' . htmlspecialchars($item['id']) . '">
                                                                                                         </div>                     
                                                                                             </div>
                                                                                             
@@ -1026,12 +1026,216 @@ function toggleDiv(checkbox, targetDivId) {
 
 document.addEventListener("DOMContentLoaded", function () {
     // Add event listener to all plus buttons
+    let array = [];
+    let third_large_array = [];
     document.querySelectorAll('.plus-btn').forEach(button => {
         button.addEventListener('click', function () {
             const id = this.getAttribute('data-id');
+
             document.getElementById(`plus_icon${id}`).style.display = 'none';
             document.getElementById(`minus_icon${id}`).style.display = 'block';
             document.getElementById(`details_${id}`).style.display = 'block';
+
+            $(`#open_main_value${id}`).on('keyup', function() {
+                var open_main_value = $(`#open_main_value${id}`).val();
+                var formData = {
+                    "low_support": open_main_value,
+                    "up_support": open_main_value,
+                    "stock_val": id,
+                };
+                var functionName_fetchtable = "fetch_trade_daily"
+                $.ajax({
+                url: "../Api_files/trade_data.php?function=" + functionName_fetchtable,
+                type: "POST",
+                data: formData,
+                dataType: "json",
+                    success: function(data) {
+                        
+
+                        for (const key in data) {
+                            $(`#daily_call_target_${id}`).val(open_main_value);
+                            $(`#daily_call_target_one${id}`).val(data['Targett_CE_2']);
+                            $(`#daily_call_target_two${id}`).val(data['Targett_CE_4']);
+                            $(`#daily_call_target_three${id}`).val(data['Targett_CE_1']);
+                            array.push(data['Targett_CE_1']); // Append the value
+                            
+                            $(`#daily_final${id}`).val(data['Targett_CE_1']);
+                            $(`#daily_call_target_four${id}`).val(data['Targett_CE_3']);
+                            $(`#daily_call_tarput_${id}`).val(open_main_value);
+                            $(`#daily_call_tarput_one${id}`).val(data['Targett_CE_5']);
+                            $(`#daily_call_tarput_two${id}`).val(data['Targett_CE_8']);
+                            $(`#daily_call_tarput_three${id}`).val(data['Targett_CE_7']);
+                            third_large_array.push(data['Targett_CE_7']); // Append the value
+                            $(`#put_daily_final${id}`).val(data['Targett_CE_7']);
+                            $(`#daily_call_tarput_four${id}`).val(data['Targett_CE_6']);
+
+
+                            $(`#weekly_call_target_${id}`).val(open_main_value);
+                            $(`#weekly_call_target_one${id}`).val(data['Targett_WEEK_1']);
+                            $(`#weekly_call_target_two${id}`).val(data['Targett_WEEK_2']);
+                            $(`#weekly_call_target_three${id}`).val(data['Targett_WEEK_4']);
+                            array.push(data['Targett_WEEK_4']); // Append the value
+                            $(`#weekly_final${id}`).val(data['Targett_WEEK_4']);
+                            $(`#weekly_call_target_four${id}`).val(data['Targett_WEEK_3']);
+                            $(`#weekly_call_tarput_${id}`).val(open_main_value);
+                            $(`#weekly_call_tarput_one${id}`).val(data['Targett_WEEK_5']);
+                            $(`#weekly_call_tarput_two${id}`).val(data['Targett_WEEK_8']);
+                            $(`#weekly_call_tarput_three${id}`).val(data['Targett_WEEK_6']);
+                            third_large_array.push(data['Targett_WEEK_6']); // Append the value
+                            $(`#put_weekly_final${id}`).val(data['Targett_WEEK_6']);
+                            $(`#weekly_call_tarput_four${id}`).val(data['Targett_WEEK_7']);
+
+
+                            $(`#monthly_call_target_${id}`).val(open_main_value);
+                            $(`#monthly_call_target_one${id}`).val(data['Targett_Month_1']);
+                            $(`#monthly_call_target_two${id}`).val(data['Targett_Month_4']);
+                            $(`#monthly_call_target_three${id}`).val(data['Targett_Month_2']);
+                            array.push(data['Targett_Month_2']); // Append the value
+                            $(`#monthly_final${id}`).val(data['Targett_Month_2']);
+                            $(`#monthly_call_target_four${id}`).val(data['Targett_Month_3']);
+                            $(`#monthly_call_tarput_${id}`).val(open_main_value);
+                            $(`#monthly_call_tarput_one${id}`).val(data['Targett_Month_5']);
+                            $(`#monthly_call_tarput_two${id}`).val(data['Targett_Month_6']);
+                            $(`#monthly_call_tarput_three${id}`).val(data['Targett_Month_8']);
+                            third_large_array.push(data['Targett_Month_8']); // Append the value
+                            $(`#put_monthly_final${id}`).val(data['Targett_Month_8']);
+                            $(`#monthly_call_tarput_four${id}`).val(data['Targett_Month_7']);
+
+
+                            $(`#hourly_call_target_${id}`).val(open_main_value);
+                            $(`#hourly_call_target_one${id}`).val(data['Targett_HOUR_1']);
+                            $(`#hourly_call_target_two${id}`).val(data['Targett_HOUR_4']);
+                            $(`#hourly_call_target_three${id}`).val(data['Targett_HOUR_3']);
+                            array.push(data['Targett_HOUR_3']); // Append the value
+                            $(`#hourly_final${id}`).val(data['Targett_HOUR_3']);
+                            $(`#hourly_call_target_four${id}`).val(data['Targett_HOUR_2']);
+                            $(`#hourly_call_tarput_${id}`).val(open_main_value);
+                            $(`#hourly_call_tarput_one${id}`).val(data['Targett_HOUR_5']);
+                            $(`#hourly_call_tarput_two${id}`).val(data['Targett_HOUR_6']);
+                            $(`#hourly_call_tarput_three${id}`).val(data['Targett_HOUR_8']);
+                            third_large_array.push(data['Targett_HOUR_8']); // Append the value
+                            $(`#put_hourly_final${id}`).val(data['Targett_HOUR_8']);
+                            $(`#hourly_call_tarput_four${id}`).val(data['Targett_HOUR_7']);
+
+
+                            $(`#fifteen_call_target_${id}`).val(open_main_value);
+                            $(`#fifteen_call_target_one${id}`).val(data['Targett_FIF_2']);
+                            $(`#fifteen_call_target_two${id}`).val(data['Targett_FIF_1']);
+                            $(`#fifteen_call_target_three${id}`).val(data['Targett_FIF_4']);
+                            array.push(data['Targett_FIF_4']); // Append the value
+                            $(`#fifteen_final${id}`).val(data['Targett_FIF_4']);
+                            $(`#fifteen_call_target_four${id}`).val(data['Targett_FIF_3']);
+                            $(`#fifteen_call_tarput_${id}`).val(open_main_value);
+                            $(`#fifteen_call_tarput_one${id}`).val(data['Targett_FIF_5']);
+                            $(`#fifteen_call_tarput_two${id}`).val(data['Targett_FIF_6']);
+                            $(`#fifteen_call_tarput_three${id}`).val(data['Targett_FIF_8']);
+                            third_large_array.push(data['Targett_FIF_8']); // Append the value
+                            $(`#put_fifteen_final${id}`).val(data['Targett_FIF_8']);
+                            $(`#fifteen_call_tarput_four${id}`).val(data['Targett_FIF_7']);
+
+                        }  
+                        
+                        var firstFiveValues_arr = third_large_array.slice(0, 5);
+                        var firstFiveValues = array.slice(0, 5);
+
+                        
+                        let C7 = open_main_value; // C7 as a string
+                        let numberArray = firstFiveValues.map(value => parseFloat(value));
+                        let C7Number = parseFloat(C7);
+                        let countLess = numberArray.filter(value => value < C7Number).length;
+                        numberArray.sort((a, b) => a - b);
+                        let result = numberArray[countLess];
+                        $(`#down_trend_means_one${id}`).val(result);
+                        
+                        let num = parseFloat(result); // Convert string to number
+                        let roundedValue = Math.ceil(num / 100) * 100; // Round up
+                        $(`#put_trend_means_one${id}`).val(roundedValue);
+
+                        
+                        let numberArray_val = firstFiveValues_arr.map(Number);
+                        numberArray_val.sort((a, b) => b - a);
+                        if (numberArray_val.length >= 3) {
+                            let thirdHighest = numberArray_val[2]; // Third largest is at index 2
+                            $(`#down_trend_means__two${id}`).val(thirdHighest);
+                            let num1 = parseFloat(thirdHighest); // Convert string to number
+                            let roundedValue1 = Math.ceil(num1 / 100) * 100; // Round up
+                            $(`#put_trend_means_two${id}`).val(roundedValue1);
+
+                        } else {
+                            $(`#down_trend_means__two${id}`).val("0");
+                        }
+
+
+
+                        let numberArray_val_put = firstFiveValues.map(Number);
+                        numberArray_val_put.sort((a, b) => b - a);
+                        if (numberArray_val_put.length >= 3) {
+                            let thirdHighest_put = numberArray_val_put[2]; // Third largest is at index 2
+                            $(`#up_trend_means_one${id}`).val(thirdHighest_put);
+                            let num1 = parseFloat(thirdHighest_put); // Convert string to number
+                            let roundedValue2 = Math.floor(num1 / 100) * 100; // Round up
+                            $(`#put_up_trend_means_one${id}`).val(roundedValue2);
+
+                        } else {
+                            $(`#up_trend_means_one${id}`).val("0");
+                        }
+
+
+                        
+
+                        // Value of M7 (the reference value)
+                        let M7 = (open_main_value);
+
+                        // Step 1: Filter values greater than M7
+                        let greaterValues = firstFiveValues_arr.filter(value => value > M7);
+
+                        // Step 2: Calculate rank (number of values greater than M7)
+                        let rank = greaterValues.length + 1;
+
+                        // Step 3: Sort the array in descending order
+                        let sortedArray = firstFiveValues_arr.slice().sort((a, b) => b - a);
+
+                        // Step 4: Get the value at the calculated rank
+                        let result1 = sortedArray[rank - 1];
+
+                        $(`#up_trend_means_two${id}`).val(result1);
+                        
+                        let num1 = parseFloat(result1); // Convert string to number
+                        let roundedValue1 = Math.floor(num1 / 100) * 100; // Round up
+                        $(`#put_up_trend_means_two${id}`).val(roundedValue1);
+
+
+
+                        // Convert strings to numbers and sort the array in descending order
+                        var sortedArr = firstFiveValues.map(function(num) {
+                            return parseFloat(num);
+                        }).sort(function(a, b) {
+                            return b - a; // Sort in descending order
+                        });
+                        $(`#scalping_put${id}`).val(sortedArr[1]);
+                        
+
+
+                         // Count the number of zeros in the array
+                        var countZeros = firstFiveValues_arr.filter(function(value) {
+                            return value === 0;
+                        }).length;
+                        var position = countZeros + 2;
+                        var sortedValues = firstFiveValues_arr.slice().sort(function(a, b) {
+                            return a - b; // Sorting in ascending order
+                        });
+                        var nthSmallest = sortedValues[position - 1]; // Array index starts from 0, so subtract 1
+                        
+                        $(`#scalping_call${id}`).val(nthSmallest);
+
+                    }
+                }); 
+
+               
+
+
+            });
+
         });
     });
 
@@ -1046,4 +1250,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
 </script>
+

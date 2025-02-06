@@ -19,7 +19,7 @@ if (!isset($_SESSION['username'])) {
                                 <select class="form-control" id ="category_list">
                                         <?php
                                             $functionName = 'fetchData_stocks';
-                                            $url = 'http://localhost/Share_Market/Api_files/query_file.php?function=fetchData_stocks';
+                                            $url = 'http://localhost/Share_Market/Api_files/monthly_query.php?function=fetchData_stocks';
                                             $jsonData = file_get_contents($url);
 
                                             $dataArray = json_decode($jsonData, true);
@@ -42,9 +42,9 @@ if (!isset($_SESSION['username'])) {
                         </div>
                         <div class="col-md-3">
                             <div class="card-body">
-                            <h4 class="card-title">Total Daily Details</h4>
+                            <h4 class="card-title">Total Monthly Details</h4>
                             <div class="template-demo">
-                                <button type="button" class="btn btn-success btn-rounded btn-fw" id="click-stock">Add Daily</button>
+                                <button type="button" class="btn btn-success btn-rounded btn-fw" id="click-stock">Add Monthly</button>
                             </div>
                             </div>
                         </div>
@@ -54,10 +54,10 @@ if (!isset($_SESSION['username'])) {
                             <div class="template-demo">
                                 <label for="exampleInputUsername1">Stock name</label>
 
-                                <select class="form-control">
+                                <select class="form-control" id="category_list_3">
                                         <?php
                                             $functionName = 'fetchData_stocks';
-                                            $url = 'http://localhost/Share_Market/Api_files/query_file.php?function=fetchData_stocks';
+                                            $url = 'http://localhost/Share_Market/Api_files/monthly_query.php?function=fetchData_stocks';
                                             $jsonData = file_get_contents($url);
 
                                             $dataArray = json_decode($jsonData, true);
@@ -77,7 +77,7 @@ if (!isset($_SESSION['username'])) {
                                         ?>
                                 </select>
 
-                                <button type="button" class="btn btn-warning btn-icon-text">
+                                <button type="button" class="btn btn-warning btn-icon-text button_del">
                                 <i class="mdi mdi-alert btn-icon-prepend"></i>                                                    
                                 Truncate
                                 </button>
@@ -87,7 +87,7 @@ if (!isset($_SESSION['username'])) {
                         </div>
                         <div class="col-md-3">
                             <div class="card-body">
-                            <h4 class="card-title">Bulk Upload Daily Details</h4>
+                            <h4 class="card-title">Bulk Upload Monthly Details</h4>
                             <div class="template-demo">
                                 <form id="uploadForm" enctype="multipart/form-data">
                                     <input class="typeahead file-input" type="file" id="fileInput" name="fileInput" accept=".xlsx" type="file">
@@ -104,17 +104,17 @@ if (!isset($_SESSION['username'])) {
                         <div class="col-md-12 grid-margin stretch-card" style="display:none;" id="open-stock">
                             <div class="card" style="">
                             <div class="card-body">
-                                <h4 class="card-title">Daily Form</h4>
+                                <h4 class="card-title">Monthly Form</h4>
                                 
                                 <form class="forms-sample">
                                     <div class="form-group row">
                                         <div class="col">
                                             <label>Select Stock</label>
                                             <div id="bloodhound">
-                                            <select class="form-control">
+                                            <select class="form-control" id = "category_list_2">
                                                 <?php
                                                     $functionName = 'fetchData_stocks';
-                                                    $url = 'http://localhost/Share_Market/Api_files/query_file.php?function=fetchData_stocks';
+                                                    $url = 'http://localhost/Share_Market/Api_files/monthly_query.php?function=fetchData_stocks';
                                                     $jsonData = file_get_contents($url);
 
                                                     $dataArray = json_decode($jsonData, true);
@@ -138,25 +138,32 @@ if (!isset($_SESSION['username'])) {
                                         <div class="col">
                                             <label>High</label>
                                             <div id="the-basics">
-                                                <input class="typeahead" type="text" placeholder="High">
+                                                <input class="typeahead" type="text" placeholder="High" id="high-value">
                                             </div>
                                         </div>
+                                        
                                         <div class="col">
                                             <label>Low</label>
                                             <div id="bloodhound">
-                                                <input class="typeahead" type="text" placeholder="Low">
+                                                <input class="typeahead" type="text" placeholder="Low" id="low-value">
                                             </div>
                                         </div>
                                         <div class="col">
-                                            <label>Support</label>
+                                            <label>Open</label>
                                             <div id="the-basics">
-                                                <input class="typeahead" type="text" placeholder="Support">
+                                                <input class="typeahead" type="text" placeholder="Open" id="open-value">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <label>Close</label>
+                                            <div id="the-basics">
+                                                <input class="typeahead" type="text" placeholder="Close" id="close-value">
                                             </div>
                                         </div>
                                         <div class="col">
                                             <label>Date</label>
                                             <div id="bloodhound">
-                                                <input class="typeahead" type="date" placeholder="Date">
+                                                <input class="typeahead" type="date" placeholder="Date" id="date-value">
                                             </div>
                                         </div>
                                         
@@ -164,7 +171,7 @@ if (!isset($_SESSION['username'])) {
 
                                     
                                 
-                                    <button type="submit" class="btn btn-primary me-2" id="add_new_stock">Submit</button>
+                                    <button type="submit" class="btn btn-primary me-2" id="add-new-daily-details">Submit</button>
                                     <button type="submit" class="btn btn-primary me-2" id="edit_new_stock" style="display:none">Submit</button>
 
                                     <button class="btn btn-light">Cancel</button>
@@ -178,7 +185,7 @@ if (!isset($_SESSION['username'])) {
                     </div>
                     <div class="card">
                         <div class="card-body">
-                        <h4 class="card-title">Stocks Details</h4>
+                        <h4 class="card-title">Monthly Details</h4>
                         <div class="row">
                             <div class="col-md-3">
                                 <input type="text" class="form-control" placeholder="search"  id="search">
@@ -560,5 +567,108 @@ function uploadfile(){
     }
     
 }
+
+
+$('#add-new-daily-details').on('click', function() {
+    event.preventDefault(); // Prevent default behavior
+
+    var stock_text = $('#category_list_2 option:selected').text();
+    var stock_val = $('#category_list_2 option:selected').val();
+    var open_val = $('#open-value').val();
+    var date_val = $('#date-value').val();
+    var high_val = $('#high-value').val();
+    var low_val = $('#low-value').val();
+    var close_val = $('#close-value').val();
+
+    if (stock_text === "" || stock_val == 0) {
+        toastr.info("Please check Stock value");
+    }
+    else if (date_val === "") {
+        toastr.info("Please check Date value");
+    }
+    else if (open_val === "") {
+        toastr.info("Please check Open value");
+    }else if (high_val === "") {
+        toastr.info("Please check High value");
+    }else if (low_val === "") {
+        toastr.info("Please check Low value");
+    }else if (close_val === "") {
+        toastr.info("Please check Close value");
+    }else{
+
+        var formData = {
+            "stock_text": stock_text,
+            "stock_val": stock_val,
+            "open_val": open_val,
+            "date_val": date_val,
+            "high_val": high_val,
+            "low_val": low_val,
+            "close_val": close_val
+
+        };
+        var functionName_fetchtable = "add_new_entry"
+        $.ajax({
+        url: "../Api_files/monthly_query.php?function=" + functionName_fetchtable,
+        type: "POST",
+        data: formData,
+        dataType: "json",
+
+            success: function(response) {
+                // if( data == "Sucess"){
+                //     toastr.info("New Reecord Created Successfully");
+                //     setTimeout(function() {
+                //         location.reload();
+                //     }, 2000);
+                // }
+                if (response.success == false) {
+                    // Display the error message or handle accordingly
+                    toastr.info("Error: " + response.message);
+
+                } else {
+                    toastr.info("New Reecord Created Successfully");
+                    setTimeout(function() {
+                        location.reload();
+                    }, 2000);
+
+                    // Handle successful response here
+                }
+                
+                
+            }
+        }); 
+    }
+    
+   
+});
+
+$('.button_del').on('click', function() {
+    var stock_text = $('#category_list_3 option:selected').text();
+    var stock_val = $('#category_list_3 option:selected').val();
+    
+    if (stock_text === "" || stock_val == 0) {
+        toastr.info("Please check Stock value");
+    }else{
+
+        var formData = {
+            "stock_text": stock_text,
+            "stock_val": stock_val
+        };
+        var functionName_fetchtable = "delete_details_trunc"
+        $.ajax({
+        url: "../Api_files/monthly_query.php?function=" + functionName_fetchtable,
+        type: "POST",
+        data: formData,
+        dataType: "json",
+
+            success: function(response) {
+                toastr.info(response.message);
+                
+                
+            }
+        }); 
+    }
+    
+   
+});
 
 </script>
